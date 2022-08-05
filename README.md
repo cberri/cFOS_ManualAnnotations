@@ -1,6 +1,6 @@
-## cFOS Manual Annotation for Quanty_cFOS Automated Analysis Validation
+## cFOS Manual Annotation for Quanty-cFOS Automated  Validation
 
-This repository contains the *ImageJ/Fiji GT_Annotations.ijm* tool and representative cFOS stained images that can be used to validate the Quanty_cFOS automated counting tool. 
+This repository contains the *ImageJ/Fiji GT_Annotations.ijm* tool and representative cFOS stained images that can be used to validate the Quanty-cFOS automated counting tool for cFOS protein and mRNA
 
 
 
@@ -30,5 +30,5 @@ The **output folder** is saved in the input folder and it contains:
 
 
 
-Please let me know if you have any suggestion on how to improve the tool or if you think it is missing some functionalities. 
+Please let me know if you have any suggestion on how to improve the tool or if you think some functionalities are missing
 
