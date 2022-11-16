@@ -1,16 +1,16 @@
-## Fos/*c-fos* Manual Annotation for Quanty-cFOS  Validation
+## Fos  Protein and *c-fos* mRNA Manual Counts for Quanty-cFOS.ijm  Validation
 
 This repository contains the *ImageJ/Fiji GT_Annotations.ijm* tool and representative Fos/*c-fos* stained images that can be used to validate the Quanty-cFOS automated counting tool for Fos protein and *c-fos* mRNA
 
 
 
-#### How to run the *GT_Annotations.ijm* tool
+#### How to run the *GT-Annotations_v0.ijm* tool
 
-The user can open the *GT_Annotations.ijm* by dragging and dropping the file on the main ImageJ/Fiji window. This opens the ImageJ/Fiji interpreter that can be used to run the code.
+The user can open the *GT_Annotations.ijm* by dragging and dropping the file on the main ImageJ/Fiji window. This opens the ImageJ/Fiji interpreter that can be used to run the code. Alternatively, you can copy the file in the ImageJ/Fiji plugin directory and run the tool using the ImageJ/Fiji GUI (e.g.: `C:\Users\XXX\XXX\XXX\fiji-win64\Fiji.app\plugins`). Please, restart ImageJ/Fiji after this operation
 
 <u>Step-by-Step Instructions:</u>
 
-1. Hit the **Run** button
+1. Hit the **Run** button or go to plugin and select *GT-Annotations_v0*
 2. Select the input file to process from the **SampleImages** folder
 3. A dialog box will pop up
 4. Enter your **fist name** and press **ok**

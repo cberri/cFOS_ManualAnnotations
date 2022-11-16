@@ -8,7 +8,7 @@
  * Tel.: +49 (0) 6221 54 51435
  * 
  * Created: 2020/12/09
- * Last update: 2020/12/09
+ * Last update: 2022/11/16
  * 
  * NB: 
  * 1. POSITIVE is annotated by left click 
@@ -144,7 +144,7 @@ function InputUserSettingParameters(id, title) {
 
 	width=600; height=512;
 	experimentTitle = title;
-	userName = "First Name";
+	userName = "First Name and Last Name";
 	objID = id;
 
 	startAnnotation = true;
@@ -152,8 +152,8 @@ function InputUserSettingParameters(id, title) {
 	makeCompoiste = false;
 	
 	Dialog.create("Ground Truth Annotation Setting");
-	Dialog.addString("Experiment Name", experimentTitle, 20);
-	Dialog.addString("User Name", userName, 20);
+	Dialog.addString("File Name", experimentTitle, 50);
+	Dialog.addString("Experimenter", userName, 50);
 	Dialog.addNumber("ID", objID, 0, 8, "");
 	
 	Dialog.addCheckbox("Start Annotating", startAnnotation);
@@ -161,8 +161,8 @@ function InputUserSettingParameters(id, title) {
 	Dialog.addToSameRow();
 	Dialog.addCheckbox("Create Composite", makeCompoiste);
 	Dialog.addMessage("____________________________________________________________________________");
-	Dialog.addMessage("1. Positive cFOS Annotation (Class Id 1): LEFT MOUSE CLICK", 11, "#001090");
-	Dialog.addMessage("2. Negative cFOS Annotation (Class Id 3): RIGHT MOUSE CLICK", 11, "#001090");
+	Dialog.addMessage("1. Positive Fos/c-fos Annotation (Class Id 1): LEFT MOUSE CLICK", 11, "#001090");
+	Dialog.addMessage("2. Negative Fos/c-fos Annotation (Class Id 3): RIGHT MOUSE CLICK", 11, "#001090");
 	Dialog.addMessage("3. End annotating: Press SHIFT", 11, "#001090");
   	Dialog.show();
 
@@ -231,11 +231,11 @@ function MouseAnnotation(objID, frames) {
             	roiManager("Add");
             	roiManager("Set Color", "green"); 
             	roiManager("select", count);
-            	roiManager("rename", "cFOS Positive_" + x + "-" + y + "-" + z);
+            	roiManager("rename", "Positive_" + x + "-" + y + "-" + z);
             	roiManager("deselect");
 
             	// Output
-            	print(id + "\t" + x + "\t" + y  +"\t"  + 3 + "\t" + "cFOS Positive" + "\t");	
+            	print(id + "\t" + x + "\t" + y  +"\t"  + 3 + "\t" + "Positive Counts" + "\t");	
             			
      		// Left Mouse Clikc
      		} else if (flags & rightClick != 0) {
@@ -254,11 +254,11 @@ function MouseAnnotation(objID, frames) {
             	roiManager("Add");
             	roiManager("Set Color", "red"); 
             	roiManager("select", count);
-            	roiManager("rename", "cFOS Negative_" + x + "-" + y + "-" + z);
+            	roiManager("rename", "Negative_" + x + "-" + y + "-" + z);
             	roiManager("deselect");
 
 				// Output
-        		print(id + "\t" + x + "\t" + y  +"\t"  + 1 + "\t" + "cFOS Negative" + "\t");
+        		print(id + "\t" + x + "\t" + y  +"\t"  + 1 + "\t" + "Negative Counts" + "\t");
 
      		}
         		
